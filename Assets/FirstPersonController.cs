@@ -9,10 +9,25 @@ public class FirstPersonController : MonoBehaviour
     public CharacterController characterController;
 
     // Player settings
+    [Header("Touchscreen Movement")]
     public float cameraSensitivity;
     public float moveSpeed;
     public float moveInputDeadZone;
 
+    [Header("Ground & Jumping")]
+    public float stickToGroundForce = 10;
+    public float gravity = 10;
+    private float verticleVelocity;
+    public float jumpForce = 10;
+
+    [Header("Ground Check")]
+    public Transform groundCheck;
+    public LayerMask groundLayers;
+    public float groundCheckRadius;
+
+    private bool grounded;
+
+    
     // Touch detection
     int leftFingerId, rightFingerId;
     float halfScreenWidth;
@@ -59,6 +74,11 @@ public class FirstPersonController : MonoBehaviour
             Debug.Log("Moving");
             Move();
         }
+        Move2();
+    }
+    private void FixedUpdate()
+    {
+        grounded = Physics.CheckSphere(groundCheck.position, groundCheckRadius, groundLayers);
     }
 
     void GetTouchInput()
@@ -153,6 +173,20 @@ public class FirstPersonController : MonoBehaviour
         Vector2 movementDirection = moveInput.normalized * moveSpeed * Time.deltaTime;
         // Move relatively to the local transform's direction
         characterController.Move(transform.right * movementDirection.x + transform.forward * movementDirection.y);
+    }
+
+    void Move2()
+    {
+        if (grounded && verticleVelocity <= 0) verticleVelocity = -stickToGroundForce * Time.deltaTime;
+        else verticleVelocity -= gravity * Time.deltaTime;
+
+        Vector3 verticleMovement = transform.up * verticleVelocity;
+        characterController.Move(verticleMovement * Time.deltaTime);
+    }
+
+    public void Jump()
+    {
+        if (grounded) verticleVelocity = jumpForce;
     }
 
 }
