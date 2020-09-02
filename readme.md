@@ -1,2 +1,9 @@
-#Files for FPS tutorials
-THis is the first of the tutorials where the code measures the touches on a screen to move and look around.
+# Files for Multitouch FPS tutorial with Jump
+
+The two tutorials that I have used to create this attempt:
+
+[Make a MOBILE FIRST PERSON controller in UNITY](https://www.youtube.com/watch?v=lYJtTYveYg0&t=378s)
+[Make a MOBILE game in Unity - Adding GRAVITY and JUMPING](https://www.youtube.com/watch?v=FrsIgyqduLU)
+
+Here is the one that does the tutorials
+[whateep](https://www.youtube.com/channel/UCMR5qS7_BlPM2zSb9sh6WmA)
