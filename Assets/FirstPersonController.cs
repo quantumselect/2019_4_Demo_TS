@@ -79,6 +79,7 @@ public class FirstPersonController : MonoBehaviour
     private void FixedUpdate()
     {
         grounded = Physics.CheckSphere(groundCheck.position, groundCheckRadius, groundLayers);
+        Debug.Log(grounded);
     }
 
     void GetTouchInput()
@@ -186,7 +187,7 @@ public class FirstPersonController : MonoBehaviour
 
     public void Jump()
     {
-        if (grounded) verticleVelocity = jumpForce;
+        if (!grounded) verticleVelocity = jumpForce;
     }
 
 }

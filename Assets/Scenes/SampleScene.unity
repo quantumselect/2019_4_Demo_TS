@@ -238,7 +238,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 344363305}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.62, y: 0.78, z: 1.74}
+  m_LocalPosition: {x: -0.45, y: -0.61, z: -0.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1092109509}
@@ -270,7 +270,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 456871055}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.85, z: 0}
+  m_LocalPosition: {x: -0.2, y: 0.22, z: -0.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1092109509}
@@ -606,7 +606,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 772232359}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.33, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
@@ -712,7 +712,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 2
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -749,14 +749,14 @@ MonoBehaviour:
   cameraSensitivity: 10
   moveSpeed: 8
   moveInputDeadZone: 10
-  stickToGroundForce: 7.3
-  gravity: 3.95
+  stickToGroundForce: 10
+  gravity: 10
   jumpForce: 10
   groundCheck: {fileID: 344363306}
   groundLayers:
     serializedVersion: 2
     m_Bits: 256
-  groundCheckRadius: 0.1
+  groundCheckRadius: 0
 --- !u!136 &1092109506
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -826,7 +826,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1092109502}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.34, z: 0}
+  m_LocalPosition: {x: 0, y: 2.09, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 344363306}
